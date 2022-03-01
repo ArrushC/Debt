@@ -60,6 +60,6 @@ class DebtCollector(Thread):
                     break
             sleep(60)
         
-th = DebtCollector("", "", "")
+th = DebtCollector("<username/email address>", "<password>", "<secret>")
 th.start()
 
