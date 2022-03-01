@@ -61,7 +61,7 @@ class DebtCollector(Thread):
             sleep(60)
 
 """
-Requires geckodriver
+Requires geckodriver.
 """
 
 th = DebtCollector("<username/email address>", "<password>", "<secret>")
