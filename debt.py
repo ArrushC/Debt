@@ -13,7 +13,7 @@ class DebtCollector(Thread):
         Thread.__init__(self)
         self.URL = "https://www.manage-student-loan-balance.service.gov.uk/ors/account-overview/secured/summary?_locale=en"
         self.LOGIN_URL = "https://logon.slc.co.uk/welcome/secured/login?svc=ors&_locale=en_GB_GOVUK"
-        self.LOGIN_SECRET_URL = "https://logon.slc.co.uk/welcome/secured/login-secret-answer?cookieConsent=accept"
+        # self.LOGIN_SECRET_URL = "https://logon.slc.co.uk/welcome/secured/login-secret-answer?cookieConsent=accept"
         self.username = username
         self.password = password
         self.secret = secret
@@ -59,7 +59,11 @@ class DebtCollector(Thread):
                     print(f"Program has experienced a fatal error. Here is the message:\n{e.msg}")
                     break
             sleep(60)
-        
+
+"""
+Requires geckodriver
+"""
+
 th = DebtCollector("<username/email address>", "<password>", "<secret>")
 th.start()
 
